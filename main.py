@@ -17,7 +17,7 @@ def run(text):
     f.write('import sys\ncell=[0]*69420\np=0\n')
     s=0
     for n in text:
-        f.write(' '*s+command[n]+'\n')
+        f.write(' '*s+str(command.get(n))+'\n')
         if n == '[':
             s+=1
         elif n == ']':
