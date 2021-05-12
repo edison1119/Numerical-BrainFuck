@@ -6,10 +6,10 @@ command = {'>':'p=(p+1)%69420',
            '-':'cell[p]-=cell[p+1]or 1',
            '*':'cell[p]*=cell[p+1]or 2',
            '/':'cell[p]/=cell[p+1]or 2',
-           '.':'sys.stdout.write(chr(cell[p]))',
+           '.':'sys.stdout.write(chr(abs(cell[p])))',
            ',':'cell[p]=ord(sys.stdin.read(1))',
            ':':'sys.stdout.write(str(cell[p]))',
-           ';':'sys.stdin.readline()'
+           ';':'cell[p]=int(sys.stdin.readline())'
            }
 def run(text):
     f = open('gener.py', 'w+')
@@ -21,4 +21,5 @@ def run(text):
             s+=1
         elif n == ']':
             s-=1
+
 import gener
