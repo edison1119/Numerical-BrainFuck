@@ -1,7 +1,7 @@
 command = {'>':'p=(p+1)%69420',
            '<':'p=(p+69419)%69420',
            '[':'while cell[p]:',
-           ']':'',
+           ']':'pass',
            '+':'cell[p]+=cell[p+1]or 1',
            '-':'cell[p]-=cell[p+1]or 1',
            '*':'cell[p]*=cell[p+1]or 2',
@@ -22,5 +22,4 @@ def run(text):
             s+=1
         elif n == ']':
             s-=1
-
 import gener
