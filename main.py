@@ -9,7 +9,8 @@ command = {'>':'p=(p+1)%69420',
            '.':'sys.stdout.write(chr(abs(cell[p])))',
            ',':'cell[p]=ord(sys.stdin.read(1))',
            ':':'sys.stdout.write(str(cell[p]))',
-           ';':'cell[p]=int(sys.stdin.readline())'
+           ';':'cell[p]=int(sys.stdin.readline())',
+           '%':'cell[p]%=cell[p+1]or 1'
            }
 def run(text):
     f = open('gener.py', 'w+')
