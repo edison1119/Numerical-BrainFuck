@@ -1,5 +1,5 @@
 # Numerical-BrainFuck
-Brainfuck work with both number and char
+Brainfuck that work with both number and char
 
 There are currently 14 operator, 8 extended BrainFuck operator, 6 extra.
 
