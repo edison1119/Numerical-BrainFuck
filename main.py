@@ -11,7 +11,8 @@ command = {'>':'p=(p+1)%69420',
            ':':'sys.stdout.write(str(cell[p]))',
            ';':'cell[p]=int(sys.stdin.readline())',
            '%':'cell[p]%=cell[p+1]or 1',
-           '#':'sys.stdout.write(" ".join("{}:{}".format(n,cell[n]) for n in range(69420)))'
+           '_':'cell[p]=int(cell[p])',
+           '#':'sys.stdout.write(str(p)+"\\n"+" ".join("{}:{}".format(n,cell[n]) for n in range(69420)))'
            }
 import sys
 from io import StringIO
