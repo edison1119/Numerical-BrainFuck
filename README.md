@@ -1,7 +1,7 @@
 # Numerical-BrainFuck
 Brainfuck work with both number and char
 
-There are currently 13 operator, 8 extended BrainFuck operator, 5 extra.
+There are currently 14 operator, 8 extended BrainFuck operator, 6 extra.
 
 support 69420 cells, support large int, number I/O, unicode char I/O, negative values, float.
 
@@ -21,3 +21,4 @@ Extra operator:
  - `\`: divide cell`p` value by cell`p+1` (floored)  equal to `cell[p] //=cell[p+1]` (default 2)
  - `*`: multiply cell`p` value by cell`p+1` (default 2)
  - `%`: module cell`p` value by cell`p+1` (default 1)
+ - `_`: floor cell`p`
