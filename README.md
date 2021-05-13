@@ -10,3 +10,7 @@ Some of the operator are altered from normal BF and works differently:
 
 `+`,`-`: Add/subtract value of cell`p`(pointer) with next cell(`p + 1`) value, if cell`p+1` is `0`, then default `1` is used instead.
 
+`[`,`]`,`>`,`<`: Remains same as BF.
+
+`.`,`,`: Remains same as BF, but have extend version `:`,`;`
+
