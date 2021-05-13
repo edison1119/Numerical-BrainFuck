@@ -18,7 +18,7 @@ Extra operator:
 
  - `:`: output cell`p` as an int
  - `;`: takes input until `\n` and treat it as whole int (default 0)
- - `\`: divide cell`p` value by cell`p+1` (floored)  equal to `cell[p] //=cell[p+1]` (default 2)
+ - `\`: divide cell`p` value by cell`p+1` (default 2)
  - `*`: multiply cell`p` value by cell`p+1` (default 2)
  - `%`: module cell`p` value by cell`p+1` (default 1)
  - `_`: floor cell`p`
