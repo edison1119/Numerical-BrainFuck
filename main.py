@@ -10,7 +10,8 @@ command = {'>':'p=(p+1)%69420',
            ',':'cell[p]=ord(sys.stdin.read(1)or"\\0")',
            ':':'sys.stdout.write(str(cell[p]))',
            ';':'cell[p]=int(sys.stdin.readline())',
-           '%':'cell[p]%=cell[p+1]or 1'
+           '%':'cell[p]%=cell[p+1]or 1',
+           '#':'sys.stdout.write(" ".join("{}:{}".format(n,cell[n]) for n in range(69420)))'
            }
 import sys
 from io import StringIO
@@ -27,5 +28,4 @@ def run(text):
             s+=1
         elif n == ']':
             s-=1
-
 import gener
