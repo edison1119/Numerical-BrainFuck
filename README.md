@@ -8,5 +8,5 @@ Main idea of this language: Instead of interacting/changing the pointed cell, it
 
 Some of the operator are altered from normal BF and works differently:
 
-`+`,`-`: Add/subtract value of cell`p`(pointer) with next cell(`p + 1`) value
+`+`,`-`: Add/subtract value of cell`p`(pointer) with next cell(`p + 1`) value, if cell`p+1` is `0`, then default `1` is used instead.
 
