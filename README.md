@@ -22,5 +22,5 @@ Extra operator:
  - `*`: multiply cell`p` value by cell`p+1` (default 2)
  - `%`: module cell`p` value by cell`p+1` (default 1)
  - `_`: floor cell`p`
- - `(`: if cell`p` is zero, jump to next `]`,`)`
+ - `(`: if cell`p` is zero, jump to next `]`,`)` (`]`,`)` don't jump back to `(`)
  - `)`: identical to `]`
