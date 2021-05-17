@@ -3,7 +3,7 @@ Brainfuck that work with both number and char
 
 There are currently 14 operator, 8 extended BrainFuck operator, 6 extra.
 
-support 69420 cells, support large int, number I/O, unicode char I/O, negative values, float.
+support 69420 cells, support large int, number I/O, unicode char I/O, negative values, float, bracket autocomplete.
 
 Main idea of this language: Instead of interacting/changing the pointed cell, it takes next cell's value and use it to caculate.
 
