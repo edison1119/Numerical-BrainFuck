@@ -1,26 +1,26 @@
 command = {'>':'p=(p+1)%69420',
            '<':'p=(p+69419)%69420',
-           '[':'while cell[p]:',
+           '[':'while c[p]:',
            ']':'pass',
-           '(':'if cell[p]:',
+           '(':'if c[p]:',
            ')':'pass',
-           '+':'cell[p]+=cell[p+1]or 1',
-           '-':'cell[p]-=cell[p+1]or 1',
-           '*':'cell[p]*=cell[p+1]or 2',
-           '/':'cell[p]/=cell[p+1]or 2',
-           '.':'sys.stdout.write(chr(abs(cell[p])))',
-           ',':'cell[p]=ord(sys.stdin.read(1)or"\\0")',
-           ':':'sys.stdout.write(str(cell[p]))',
-           ';':'cell[p]=int(sys.stdin.readline())',
-           '%':'cell[p]%=cell[p+1]or 1',
-           '_':'cell[p]=int(cell[p])',
-           '#':'sys.stdout.write(str(p)+"\\n"+" ".join("{}:{}".format(n,cell[n]) for n in range(69420)))'
+           '+':'c[p]+=c[p+1]or 1',
+           '-':'c[p]-=c[p+1]or 1',
+           '*':'c[p]*=c[p+1]or 2',
+           '/':'c[p]/=c[p+1]or 2',
+           '.':'sys.stdout.write(chr(abs(c[p])%sys.maxunicode))',
+           ',':'c[p]=ord(sys.stdin.read(1)or"\\0")',
+           ':':'sys.stdout.write(str(c[p]))',
+           ';':'c[p]=int(sys.stdin.readline())',
+           '%':'c[p]%=c[p+1]or 1',
+           '_':'c[p]=int(c[p])',
+           '#':'sys.stdout.write(str(p)+"\\n"+" ".join("{}:{}".format(n,c[n]) for n in range(69420)))'
            }
 import sys
 from io import StringIO
 def run(text):
     f = open('gener.py', 'w+')
-    f.write('import sys\ncell=[0]*69420\np=0\nm')
+    f.write('import sys\nc=[0]*69420\np=0\n')
     if '!' in text:
         sys.stdin=StringIO(text.split('!')[1])
     text = text.split('!')[0]
@@ -31,7 +31,7 @@ def run(text):
             s+=1
         elif n in'])':
             s-=1
-
+    f.write(' '*s+'pass')
 if __name__ == '__main__':
     run(input())
 import gener
